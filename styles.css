@@ -1,0 +1,121 @@
+@font-face {
+    font-family: 'Arcade';
+    src: url('ast/ARCADE.woff2') format('woff2');
+    src: url('ast/ARCADE.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'NullPointer';
+    src: url('ast/NullPointer.woff2') format('woff2');
+    src: url('ast/NullPointer.woff') format('woff');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: fantasy, sans;
+}
+
+.page {
+    height: 100vh;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    flex: 1;
+    background-color: rgb(247, 247, 247);
+}
+
+.frame {
+    position: relative;
+    display: flex;
+    flex: 0 2 300px;
+    justify-content: space-between
+}
+
+.bg {
+    position: absolute;
+    z-index: 0;
+    height: 100vh;
+}
+
+.light {
+    background-color: white;
+}
+
+.dark {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.y-offset {
+    position: relative;
+    z-index: 1;
+    top: 25vh; 
+}
+
+.center {
+    margin: 2px auto;
+}
+
+section {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+    padding: 0 30px;
+}
+
+section.empty {
+    flex: 0.7 10;
+}
+
+form {
+    display: flex;
+    flex: 0 1 30%;
+    justify-content: space-around;
+    box-shadow: 1px 4px 2px grey;
+    padding: 10px 30px;
+}
+
+button {
+    background-color: rgb(112, 35, 184);
+    color: white;
+    width: 200px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: blueviolet;
+}
+
+h1 {
+    font-family: 'Arcade';
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'NullPointer';
+    font-size: clamp(36px, calc(32px + 2vh), 60px);
+    max-width: 65vw;
+}
+
+legend {
+    font-size: 20px;
+    font-weight: 650;
+    margin-top: -4px;
+}
+
+p {
+    font-size: clamp(16px, calc(12px + 1vh), 21px);
+    max-width: 65vw;
+}
