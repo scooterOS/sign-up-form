@@ -13,6 +13,7 @@
 * {
     padding: 0;
     margin: 0;
+    z-index: 1;
     box-sizing: border-box;
     font-family: fantasy, sans;
 }
@@ -40,32 +41,40 @@
 .frame {
     position: relative;
     display: flex;
-    flex: 0 2 300px;
+    flex: 0.1 2 300px;
     justify-content: space-between
 }
 
-.bg {
+img.bg {
     position: absolute;
     z-index: 0;
-    height: 100vh;
+    left: calc(-40px - 4vw);
+    height: max(100vh, 600px);
 }
 
-.light {
+.light-bg {
     background-color: white;
 }
 
-.dark {
+.dark-bg {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.light {
+    color: snow;
 }
 
 .y-offset {
     position: relative;
-    z-index: 1;
     top: 25vh; 
 }
 
 .center {
     margin: 2px auto;
+}
+
+.field {
+    margin-right: auto;
 }
 
 section {
@@ -76,7 +85,7 @@ section {
 }
 
 section.empty {
-    flex: 0.7 10;
+    flex: 0.5 10;
 }
 
 form {
@@ -85,6 +94,14 @@ form {
     justify-content: space-around;
     box-shadow: 1px 4px 2px grey;
     padding: 10px 30px;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input:focus {
+    box-shadow: 0 0 2px 1px black;
 }
 
 button {
